@@ -21,6 +21,11 @@ header {
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+.headtext {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #777;
+}
 
 .profile-photo img {
   width: 150px;
