@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- 🌿 Название сайта во вкладке -->
-  <title>Психолог София</title>
+  <title>Kryzanovska</title>
 
   <!-- 💬 Описание и ключевые слова для SEO -->
   <meta name="description" content="Психолог София — помогаю обрести внутреннее равновесие, уверенность и спокойствие. Индивидуальные консультации онлайн и офлайн.">
@@ -15,8 +15,13 @@
   <!-- 📱 Цвет вкладки на мобильных -->
   <meta name="theme-color" content="#ffe6cc">
 
+    <!-- 🌐 Подключение Font Awesome для иконок -->
+
+  
+
   <!-- 🌸 Иконка сайта (favicon) -->
   <link rel="icon" type="image/png" href="cion.photo.png">
+  
 
   <!-- 🎨 Подключение таблицы стилей -->
   <link rel="stylesheet" href="style.css">
@@ -29,22 +34,22 @@
       <img src="photo_2025-10-05_14-40-16.jpg" alt="Мое фото">
     </div>
     <div class="info">
-      <h1>Мaks Kulish</h1>
+      <h1>Крижановська Софія</h1>
       <p>Краткая информация обо мне, моя профессия, увлечения и т.д.</p>
     </div>
     <div class="buttons">
       <button onclick="scrollToSection('section1')">Секция 1</button>
       <button onclick="scrollToSection('section2')">Секция 2</button>
       <button onclick="window.open('https://t.me/Kryzanovskaia', '_blank')">
-        <i class="fab fa-telegram"></i> Запис на консультацію
-      </button>
+  <i class="fab fa-telegram"></i> Запис на консультацію <span class="heart">💚</span>
+</button>
     </div>
   </header>
 
   <main>
     <section id="section1" class="fade-section">
       <h2>Секция 1</h2>
-      <p>Контент первой секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.Контент второй секции.</p>
+      <p>атфщушат фуштвуфаштф фщуаштфущ т фщушафщушаощфушоа щшфуоащфушао фущашофуа щшфуоащ </p>
       <button class="telegram-btn" onclick="window.open('https://t.me/Kryzanovskaia', '_blank')">
         <i class="fab fa-telegram"></i> Запис на гру 
       </button>
@@ -59,13 +64,29 @@
     </section>
   </main>
 
-  <footer>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/sofia.kryzanovska?igsh=MXFueDczZTkycm9jZQ==" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-  </footer>
+ <!-- ========== Рабочий футер с inline-SVG (не требует Font Awesome) ========== -->
+<footer id="site-footer" class="show">
+  <div class="social-icons">
+    <a class="social-link instagram" href="https://www.instagram.com/sofia.kryzanovska?igsh=MXFueDczZTkycm9jZQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram — Софія Крыжановская">
+      <!-- Instagram (SVG, stroke style) -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon icon-instagram" aria-hidden="true" focusable="false">
+        <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+        <circle cx="12" cy="12" r="3.5"></circle>
+        <circle cx="17.5" cy="6.5" r="0.8"></circle>
+      </svg>
+    </a>
+
+    <a class="social-link telegram" href="https://t.me/Kryzanovskaia" target="_blank" rel="noopener noreferrer" aria-label="Telegram — Запис на консультацію">
+      <!-- Telegram (simple paper plane SVG) -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon icon-telegram" aria-hidden="true" focusable="false">
+        <path d="M2 12l19-9-7 20-4-8-8-3z"></path>
+      </svg>
+    </a>
+  </div>
+
+</footer>
+
+
 
   <script>
     // Плавная навигация по секциям
@@ -93,45 +114,7 @@
       document.querySelector('header .buttons').classList.add('show');
     });
 
-    // Динамический градиент фона и Instagram анимация при скролле
-    const instagramIcon = document.querySelector('.social-icons a');
-    const footer = document.querySelector('footer');
-
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      const color1 = `rgb(${255 - scrollY/10}, ${248 - scrollY/15}, ${240 - scrollY/15})`;
-      const color2 = `rgb(${255 - scrollY/8}, ${230 - scrollY/12}, ${204 - scrollY/20})`;
-      document.body.style.setProperty('--color1', color1);
-      document.body.style.setProperty('--color2', color2);
-
-      // Анимация Instagram
-      if(scrollY > 50){
-        instagramIcon.classList.add('wiggle');
-      } else {
-        instagramIcon.classList.remove('wiggle');
-      }
-
-      // Плавное появление футера
-      if(scrollY > 200){
-        footer.classList.add('show');
-      } else {
-        footer.classList.remove('show');
-      }
-    });
   </script>
-
-
-<script>
-window.addEventListener('scroll', function() {
-  const maxScroll = 500; // пиксели, на которых фон максимально затемняется
-  const scrollY = window.scrollY;
-  let opacity = 1 - (scrollY / maxScroll);
-  if(opacity < 0.5) opacity = 0.5; // минимальная непрозрачность
-  document.documentElement.style.setProperty('--section-opacity', opacity);
-});
-</script>
-
-
 
 </body>
 </html>
