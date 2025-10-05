@@ -87,7 +87,6 @@ body {
 
 
 .back-btn {
-  margin-top: 25px;
   padding: 10px 20px;
   background-color: #ffb366;
   color: white;
@@ -97,6 +96,7 @@ body {
   font-size: 14px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  width: 160px;
 }
 
 .back-btn:hover {
@@ -104,6 +104,34 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
+
+
+
+
+.back-btn1 {
+
+  background-color: #ffb366;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 100px;
+}
+
+.back-btn1:hover {
+  background-color: #ff944d;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
+
 
 
 
@@ -150,6 +178,33 @@ body {
   transform: scale(0.95);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+
+
+
+
+
+
+.button-row {
+  display: flex;
+  justify-content: center; /* выравнивание по центру */
+  align-items: center;
+  gap: 15px; /* расстояние между кнопками */
+  flex-wrap: wrap; /* чтобы на телефоне переносились */
+  margin-top: 20px;
+}
+.button-row button {
+  min-width: 160px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Основной контент */
 main {
